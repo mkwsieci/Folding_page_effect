@@ -1,0 +1,145 @@
+.folding{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin:0;
+    padding: 0;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    background: #262626;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index:10;
+}
+.folding li{
+    list-style-type: none;
+    position: relative;
+    width: 33.333%;
+    height: 33.34%;
+    top: 0;
+    left: 0;
+    float: left;
+}
+.folding li:nth-child(1).animateY{
+    transform-origin: 0% 100% ;
+    background: #fff;
+}
+.folding li:nth-child(2).animateY{
+    transform-origin: 0% 100% ;
+    background: #fff;
+}
+.folding li:nth-child(3).animateX{
+    transform-origin:  0% ;
+    background: #fff;
+}
+.folding li:nth-child(4).animate-X{
+    transform-origin: 100% 50%;
+    background: #fff;
+}
+.folding li:nth-child(5).animate{
+    background: #fff;
+}
+.folding li:nth-child(6).animateX{
+    transform-origin:  0% ;
+    background: #fff;
+}
+.folding li:nth-child(7).animate-X{
+    transform-origin: 100% 50%;
+    background: #fff;   
+}
+.folding li:nth-child(8).animate-Y{
+    transform-origin: -50% 0%;
+    background: #fff;
+}
+.folding li:nth-child(9).animate-Y{
+    transform-origin: -50% 0%;
+    background: #fff;
+}
+
+.animate{
+    animation: animate 3s linear;
+}
+.animateX{
+    animation: animateX 2s linear;
+}
+.animate-X{
+    animation: animate-X 2s linear;
+}
+.animate-Y{
+    animation: animate-Y 2s linear;
+}
+.animateY{
+    animation: animateY 2s linear;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+@keyframes animate-X{
+    0%{
+        transform: perspective(200px) rotateY(0deg);
+        opacity: 0;
+    }
+    50%{
+        transform: perspective(200px) rotateY(180deg);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(200px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@keyframes animate-Y{
+    0%{
+        transform: perspective(200px) rotateX(0deg);
+        opacity: 0;
+    }
+    50%{
+        transform: perspective(200px) rotateX(180deg);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(200px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes animateX{
+    0%{
+        transform: perspective(200px) rotateY(0deg);
+        opacity: 0;
+    }
+    50%{
+        transform: perspective(200px) rotateY(-180deg);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(200px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@keyframes animateY{
+    0%{
+        transform: perspective(200px) rotateX(0deg);
+        opacity: 0;
+    }
+    50%{
+        transform: perspective(200px) rotateX(-180deg);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(200px) rotateX(0deg);
+        opacity: 1;
+    }
+}
